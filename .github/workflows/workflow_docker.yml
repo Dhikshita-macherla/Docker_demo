@@ -6,7 +6,7 @@ name: Build and deploy container app to Azure Web App - dpc-container-app
 on:
   push:
     branches:
-      - demo-docker
+      - demo_docker
   workflow_dispatch:
 
 jobs:
@@ -36,6 +36,6 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: abilashravita/dpc-webapp:${{ github.sha }}
+        tags: dhikshita/demo:v1
         file: ./Dockerfile
 
